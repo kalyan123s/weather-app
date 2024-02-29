@@ -1,0 +1,245 @@
+*,*::before,*::after {
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ==container=== */
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    color: #ffffff;
+    background: linear-gradient(170deg, rgba(0,9,108,1) 0%, rgba(0,0,255,1) 100%);
+}
+
+/*==== header=== */
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px;
+    font-weight: bold;
+    font-size: xl;
+    font-family:Georgia, Times, 'Times New Roman', serif;
+}
+
+/* ===tab  header styling=== */
+.tab-container{
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab{
+    cursor: pointer;
+    font-size: 1.3rem;
+    letter-spacing: normal;
+    font-weight: bold;
+    padding:5px 8px;
+}
+
+.tab.current-tab{
+    color: rgb(0, 0, 0);
+    background-color: rgb(0, 145, 255);
+    border-radius: 10px;
+}
+
+
+/* ===weather container=== */
+.weather-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block:2rem 1.5rem;
+}
+
+.btn{
+all:unset ;
+display: inline-block;
+/* outline: 0; */
+cursor: pointer;
+border: none;
+padding: 10px 20px;
+border-radius: 10px;
+background-color: #087bff;
+color: white;
+font-weight: 600;
+font-size: 16px;
+box-shadow: 4px 8px 25px 0 rgba(0, 0, 0, 0.39);
+transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
+}
+
+.btn:hover{
+    background: rgba(10, 108, 220, 0.914);
+    box-shadow: 0 6px 20px rgba(0, 7, 14, 0.23);
+}
+/* .btn.search{
+    padding: 5px 10px;
+}
+
+.btn.search img{
+    margin-top: 5px;
+} */
+
+/*== grant-location-container == */
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grant-location-container img{
+    height: 50px;
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.grant-location-container p:first-of-type{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.grant-location-container p:last-of-type{
+    font-size: 1rem;
+    margin: 8px 0 25px;
+    letter-spacing: normal;  
+}
+.grant-location-container{
+    display: none;
+}
+.grant-location-container.active{
+    display: flex;
+}
+
+/* === loader styling==== */
+.loading-container{
+    display: none;
+}
+.loading-container.active{
+    display: flex;
+}
+
+/* user-info-container */
+.user-info-container{
+    display:none;
+}
+
+.user-info-container.active{
+    display: flex;
+    /* flex-direction: column;
+    align-items: center; */
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.user-info-container p[data-weatherDesc]{
+    font-size: 1.2rem;
+    font-weight: 200px;
+    margin-top: 10px;
+}
+.user-info-container img{
+    width: 65px;    
+    height: 65px; 
+}
+
+.name p{
+    font-size: 1.5rem;
+}
+
+.name img{
+    width: 40px;    
+    height: 30px;    
+}
+
+.user-info-container p[data-temp]{
+    margin-top: 29px;
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* === parameter-container === */
+.parameter-container{
+    display: flex;
+    gap: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.parameter{
+    width: 30%;
+    max-width: 200px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px 0;
+    text-align: center;
+    backdrop-filter: blur(25px);
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 25px 45px rgba(61, 61, 61, 0.3);
+    border-radius: 0 20px;
+}
+
+.patameter img{
+    height: 40px ;
+    width: 40px;
+}
+.parameter p:first-of-type{
+    font-size: 20px;
+    font-weight: 600;
+}
+.parameter p:last-of-type{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* == searching container == */
+
+.form-container{
+    display: none;
+    width: 90%;
+    max-width: 550px;
+    margin: 0,auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 2rem;
+}
+.form-container.active{
+    display: flex ;
+}
+
+.form-container input{
+    width: calc(100% - 160px);
+    height: 35px;
+    border-radius: 20px;
+    padding: 0 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.form-container input::placeholder{
+    color: rgb(0, 0, 0,.7);
+}
+.form-container input:focus{
+    outline: 2px solid white;
+}
+.form-container .btn{
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   padding: 10px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
