@@ -5,6 +5,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+    padding: 0;
+}
+
 
 /* ==container=== */
 .wrapper{
@@ -248,6 +252,12 @@ transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
 
     .parameter {
         width: 100%;
+    }
+    .wrapper{
+        height:fit-content;
+        min-height: 100vh;    
+        padding-bottom: 40px;
+        width: 100vw;
     }
 
     .tab{
